@@ -1,10 +1,12 @@
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
+import expenses from "./expenses";
+import './App.css'
 
 function App() {
   return (
     <div>
-     <h1>Welcome to the course</h1>
-     <ExpenseItem />
+     <h1 className="page-header">Expense Tracker</h1>
+     <Expenses expenses={expenses}/>
     </div>
   );
 }

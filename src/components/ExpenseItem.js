@@ -1,11 +1,16 @@
+import ExpenseDate from './ExpenseDate';
 import './styles/ExpenseItem.css'
-function ExpenseItem() {
+
+function ExpenseItem(props) {
+    let {title, amount, date } = props.expense;
+    
+    
     return (
         <div className="expense-item">
-            <div>Date {new Date().toDateString()}</div>
+            <ExpenseDate date={date} />
             <div className="expense-item__description">
-            <h2>Title: Apple Music</h2>
-            <div className="expense-item__price">Amount: $4.99</div>
+            <h2> { title }</h2>
+            <div className="expense-item__price">Amount: { amount }</div>
             </div>
         </div>
     )
